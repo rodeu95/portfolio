@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro</title>
+        <meta charset="UTF-8"/>
+        <link href="red social.css" rel="stylesheet">
+        <link rel="icon" href="icono.ico" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <img src="img/logo.png" alt="logo"></a>
+            </div>
+        </header>
+        
+        <section id="formulario">
+            <h2>Registrarse</h2>
+            <form onsubmit="return validarContraseña()" name="Nuevo Usuario" method="post" action="php/crearUsuario.php">
+                Nickname: <br>
+                <input type="text" name="nickname" pattern="[a-zA-Z0-9]+" placeholder="Ingrese un nickname" required/><br><br>
+                Contraseña: <br>
+                <input type="password" id="contraseña" name="contraseña" maxlength="20" autocomplete="new-password" placeholder="Ingrese una contraseña" required/><br>
+                <button type="button" id="contraseña-toggle" onclick="togglePasswordVisibility('contraseña')">Mostrar</button><br><br>
+                <label>Confirmar Contraseña</label><br>
+                <input type="password" id="confirmarContraseña" placeholder="Ingrese su contraseña nuevamente" maxlength="20" name="confirmarContraseña" required><br>
+                <button type="button" id="confirmarContraseña-toggle" onclick="togglePasswordVisibility('confirmarContraseña')">Mostrar</button><br><br>
+                Nombres: <br>
+                <input type="text" name="nombre" placeholder="Ingrese su nombre" required/><br><br>
+                Apellidos: <br>
+                <input type="text" name="apellido" placeholder="Ingrese su apellido" required/><br><br>
+                E-mail: <br>
+                <input type="email" name="correo" placeholder="Ingrese su e-mail" required/><br><br>
+                Edad: <br>
+                <input type="number" name="edad" min="18" placeholder="Ingrese su edad" required/><br><br>
+                Descripción <br>
+                <textarea name="descripcion" placeholder="Ingrese una descripción"></textarea><br><br>
+                <input type="submit" name="enviar" class="boton" value="Registrarse"/>
+                <input type="reset" name="borrar" class="boton" value="Borrar"/>
+            </form>
+        </section>
+
+
+        <section id="formulario2">
+            <h2>Iniciar Sesión</h2>
+            <form name="contacto" method="post" action="php/iniciarSesion.php">
+                Nickname: <br>
+                <input type="text" name="nickname" placeholder="Ingrese su nickname" required/><br><br>
+                Contraseña: <br>
+                <input type="password" name="contraseña" autocomplete="off" placeholder="Ingrese su contraseña" required/><br><br>
+                <input type="submit" name="enviar" class="boton" value="Entrar"/>
+                <input type="reset" name="borrar" class="boton" value="Borrar"/>
+            </form>
+        </section>
+        
+        <footer>
+            <p>Copyright &copy; 2024, Rocío de Ugarriza</p>
+        </footer>
+        <script src="js/login.js"></script>
+    </body>
+</html>

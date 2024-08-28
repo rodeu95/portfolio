@@ -1,0 +1,89 @@
+<?PHP
+    include ("php/conexion.php");
+    include "php/validarSesion.php";
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mi Perfil</title>
+        <meta charset="UTF-8"/>
+        <link href="red social.css" rel="stylesheet">
+        <link rel="icon" href="icono.ico" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <img src="img/logo.png" alt="logo"></a>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="red social.html">Inicio</a></li>
+                    <li><a href="mi perfil.html">Mi Perfil</a></li>
+                    <li><a href="amigos.html">Amigos</a></li>
+                    <li><a href="buscar.html">Buscar</a></li>
+                    <li><a href="php/cerrarSesion.php">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="perfil">
+            <img src="img/foto de perfil.jpg">
+            <h1>Rocío de Ugarriza</h1>
+            <p>Descripción</p>
+            <form action="php/cambiarFoto.php" method="post" enctype="multipart/form-data">
+                Cambiar foto de perfil: <input name="archivo" id="archivo" type="file" accept=".jpg, .jpeg, .png" required/>
+                <input type="submit" name="subir" value="Subir"/>
+            </form>
+        </section>
+
+        <section id="recuadros-amigos">
+            <h2>Mis Amigos</h2>
+
+            <section class="recuadro">
+                <img src="img/unnamed.jpg" height="150" width="150">
+                <h2>Amigo 1</h2>
+                <p class="parrafo">
+                    Descripción
+                </p><br>
+                <a href="" class="boton">Ver Perfil</a><br><br>
+            </section>
+            <section class="recuadro">
+                <img src="img/unnamed.jpg" height="150" width="150">
+                <h2>Amigo 2</h2>
+                <p class="parrafo">
+                    Descripción
+                </p><br>
+                <a href="" class="boton">Ver Perfil</a><br><br>
+            </section>
+            <section class="recuadro">
+                <img src="img/unnamed.jpg" height="150" width="150">
+                <h2>Amigo 3</h2>
+                <p class="parrafo">
+                    Descripción
+                </p><br>
+                <a href="" class="boton">Ver Perfil</a><br><br>
+            </section>
+        </section>
+
+        <section id="recuadros-fotos">
+            <h2>Mis Fotos</h2>
+            <form action="php/subirFoto.php" method="post" enctype="multipart/form-data">
+                Añadir Imagen: <input name="archivo" id="archivo" type="file" accept=".jpg, .jpeg, .png" required/>
+                <input type="submit" name="subir" value="Subir"/>
+            </form>
+            <section class="recuadro">
+                <img src="img/foto1.jpg" height="200" width="280">
+            </section>
+            <section class="recuadro">
+                <img src="img/foto2.jpg" height="200" width="280">
+            </section>
+            <section class="recuadro">
+                <img src="img/foto3.jpg" height="200" width="280">
+            </section>
+        </section>
+        <footer>
+            <p>Copyright &copy; 2024, Rocío de Ugarriza</p>
+        </footer>
+    </body>
+</html>
